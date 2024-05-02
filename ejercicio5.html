@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Funciones Basicas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Programa que verifica si un n&uacute;mero es par</h1>
+    <form>
+        <label>Introduce el numero</label>
+        <input type="text" id="num" name="numero" value="">
+        <button type="button" onclick="esPar(num.value)">Verificar</button>
+
+
+        <button type="button" onclick="limpiar()">Limpiar Todos</button>
+    </form>
+
+    <script type="text/javascript">
+        function limpiar(){
+
+            lista=document.querySelectorAll('p');
+
+            if(lista.length!=0){
+                i=lista.length-1;
+                while(i>-1)
+                lista[i].parentNode.removeChild(lista[i--]);
+            }
+            else alert("No hay parrafos a eliminar");
+        }
+        function esPar(numero){
+            var resultado = parImpar(numero);
+            parrafo = document.createElement("p");
+            contenido = document.createTextNode("El numero "+numero+ "es" +resultado);
+            parrafo.appendChild(contenido);
+            document.body.appendChild(parrafo);
+            document.getElementById("num").value="";
+        }
+
+        function parImpar(numero){
+            if(numero % 2 ==0) return "par";
+            else return "impar";
+        }
+    </script>
+    <br>
+
+</body>
+<footer>
+    <a href="index.html" class="regresar">Volver al Inicio</a>
+    <p>&copy; 2024 Equipo 5. Todos los derechos reservados.</p>
+</footer>
+</html>

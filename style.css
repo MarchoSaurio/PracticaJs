@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    background-color: #efefef;
+    font-family:sans-serif;
+}
+
+header {
+    background: linear-gradient(90deg, #364552, #3c6382);
+    color: aliceblue;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-bottom: 2px solid #2c3e50; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+header h1{
+    font-weight: 700;
+    font-size: 2.5rem;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+}
+
+header p {
+    font-size: 1.25rem;
+    margin: 0;
+    padding-top: 0.5rem;
+    opacity: 0.8;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px; 
+    padding: 20px;
+    background-color: #dae5f2;
+}
+
+.item {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #364552; /* Mismo color que el encabezado */
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Para el posicionamiento del botón flotante */
+}
+
+/* Estilo para el enlace de regreso a la página de inicio */
+footer .regresar {
+    display: inline-block;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid aliceblue; /* Borde para mayor visibilidad */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Efecto hover para el enlace */
+footer .regresar:hover {
+    background-color: aliceblue; /* Cambia el fondo al pasar el ratón */
+    color: #364552; /* Cambia el color del texto */
+}
